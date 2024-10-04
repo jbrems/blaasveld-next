@@ -1,0 +1,6 @@
+.events {
+  padding: 0 15px 15px 15px;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  min-width: 300px;
+}
