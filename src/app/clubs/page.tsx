@@ -1,8 +1,12 @@
-import { Club } from "./actions"
+// import { cookies } from "next/headers"
+import { getClubs } from "./actions"
 import ClubForm from "./ClubForm"
 
 export default async function ClubsPage() {
-  const clubs = await fetch(new URL(`${process.env.NEXT_URL}/api/clubs`)).then(res => res.json())  as Club[]
+  // const clubCookie =  cookies().get('blv_clubs') || { name: 'blv_clubs', value: ''}
+  // const clubs = await fetch(new URL(`${process.env.NEXT_URL}/api/clubs`), { method: 'GET', credentials: 'include'}).then(res => res.json())  as Club[]
+
+  const clubs = await getClubs()
 
   return <>
     <h2>Verenigingen</h2>
