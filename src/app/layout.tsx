@@ -33,7 +33,7 @@ export default function RootLayout({
         <div>
           {children}
         </div>
-        <div style={{display: 'flex', alignItems: 'stretch', gap: '10px'}}>
+        <div style={{display: 'flex', alignItems: 'stretch', gap: '10px', marginTop: '50px' }}>
           {clubs}
           {events}
           {shops}
