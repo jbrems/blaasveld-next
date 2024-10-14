@@ -20,5 +20,3 @@ export function getOpeningHours(shopId: number): WeeklyOpeningHours {
 export const getCachedOpeningHours = cache(getOpeningHours)
 
 export const getNextCachedOpeningHours = unstable_cache(async (shopId) => getOpeningHours(shopId), ['opening-hours'], { tags: ['opening-hours']})
-
-export const getDoubleCachedOpeningHours = unstable_cache(async (shopId) => cache((id: number) => getOpeningHours(id))(shopId), ['opening-hours'], { tags: ['opening-hours']})

@@ -1,3 +1,3 @@
 export default function Default() {
-  return 'Noting to show :('
+  return 'Nothing to show :('
 }
